@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="blob/main/files/nilgiri.PNG" alt="Nilgiri Logo" width="200"/>
+  <img src="files/nilgiri.PNG" alt="Nilgiri Logo" width="200"/>
 </p>
 <h1 align="center">Nilgiri Automation Framework</h1>
 
