@@ -22,7 +22,7 @@
 
 ## Framework Flow
 
-![Nilgiri Framework](../nilgiri/files/nilgiriFramework.PNG)
+![Nilgiri Framework](files/nilgiriFramework.PNG)
 
 ---
 
@@ -111,7 +111,7 @@ Before you begin, ensure you have [Node.js](https://nodejs.org/) installed on yo
 
 Record your test with [Playwright CodeGen](https://playwright.dev/docs/codegen)
 
-![Playwright CodeGen Demo](../nilgiri/files/PlaywrightCodeGen.gif)
+![Playwright CodeGen Demo](files/PlaywrightCodeGen.gif)
 
 ## Running Tests
 
@@ -152,11 +152,11 @@ We welcome contributions to the Nilgiri framework. Please read through our contr
 
 ## Support
 
-If you encounter any issues or have questions, please file an issue on the GitHub repository issue tracker.[Nilgiri GitHub repository](../nilgiri/issues/).
+If you encounter any issues or have questions, please file an issue on the GitHub repository issue tracker.[Nilgiri GitHub repository](issues/).
 
 ## License
 
-Nilgiri is open-source software licensed under the [licensed under the MIT license](../nilgiri/LICENSE.txt).
+Nilgiri is open-source software licensed under the [licensed under the MIT license](LICENSE.txt).
 
 Thank you for choosing Nilgiri Framework for your automation needs!
 <p align="center">
