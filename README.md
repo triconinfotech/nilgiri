@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/animeshkumar29/nilgiri/main/nilgiri.png" alt="Nilgiri Logo" width="200"/>
+  <img src="../nilgiri/files/nilgiri.PNG" alt="Nilgiri Logo" width="200"/>
 </p>
 <h1 align="center">Nilgiri Automation Framework</h1>
 
@@ -22,7 +22,7 @@
 
 ## Framework Flow
 
-![Nilgiri Framework](https://raw.githubusercontent.com/animeshkumar29/nilgiri/main/nilgiriFramework.png)
+![Nilgiri Framework](../nilgiri/files/nilgiriFramework.PNG)
 
 ---
 
@@ -111,7 +111,7 @@ Before you begin, ensure you have [Node.js](https://nodejs.org/) installed on yo
 
 Record your test with [Playwright CodeGen](https://playwright.dev/docs/codegen)
 
-![Playwright CodeGen Demo](https://raw.githubusercontent.com/animeshkumar29/nilgiri/main/PlaywrightCodeGen.gif)
+![Playwright CodeGen Demo](../nilgiri/files/PlaywrightCodeGen.gif)
 
 ## Running Tests
 
@@ -152,11 +152,11 @@ We welcome contributions to the Nilgiri framework. Please read through our contr
 
 ## Support
 
-If you encounter any issues or have questions, please file an issue on the GitHub repository issue tracker.[Nilgiri GitHub repository](https://github.com/animeshkumar29/nilgiri/issues).
+If you encounter any issues or have questions, please file an issue on the GitHub repository issue tracker.[Nilgiri GitHub repository](../nilgiri/issues/).
 
 ## License
 
-Nilgiri is open-source software licensed under the [licensed under the MIT license](https://github.com/animeshkumar29/nilgiri/blob/main/LICENSE.txt).
+Nilgiri is open-source software licensed under the [licensed under the MIT license](../nilgiri/LICENSE.txt).
 
 Thank you for choosing Nilgiri Framework for your automation needs!
 <p align="center">
