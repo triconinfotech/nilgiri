@@ -1,0 +1,24 @@
+{
+  "name": "nilgiri",
+  "version": "0.0.15",
+  "description": "Custom npm initializer for Playwright cucumber Type Script",
+  "bin": {
+    "create-nilgiri": "index.js"
+  },
+  "keywords": [
+    "npm-init",
+    "initializer",
+    "custom",
+    "playwright",
+    "tricon",
+    "cucumber",
+    "Automation framework",
+    "framework"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tricon Infotech"
+}

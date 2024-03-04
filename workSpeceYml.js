@@ -1,0 +1,151 @@
+const gitHubActionYMLScript = 
+`name: Nilgiri_Automation
+
+on:
+  push:
+    branches:
+      - dev
+  workflow_dispatch:
+    inputs:
+      custom_feature_file:
+        description: 'Custom feature file to run test'
+        required: false
+        default: ''
+  schedule:
+    - cron: '0 0 31 11 *'  # Run every night at midnight UTC
+
+jobs:
+  run_sanity_test_on_dev_push:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/dev'
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Install Dependencies
+        run: npm run nilgiriDependencyInstall
+
+      - name: Install Playwright
+        run: npx playwright install
+
+      - name: Run Sanity Tests
+        run: npm run sanityTests
+
+      # - name: Archive Sanity Test Report
+      #   uses: actions/upload-artifact@v2
+      #   with:
+      #     name: sanity-test-report
+      #     path: /home/runner/work/nilgiri/nilgiri/report
+
+  run_single_file_with_curl:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'workflow_dispatch' && (github.event.inputs.custom_feature_file || '') != ''
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Install Dependencies
+        run: npm run nilgiriDependencyInstall
+
+      - name: Install Playwright
+        run: npx playwright install
+        #Please give $ in front of {{ github.event.inputs.custom_feature_file }} in your real yml file
+      - name: Run Single File with Curl
+        run: |
+          echo "Running custom feature file: {{ github.event.inputs.custom_feature_file }}"
+          npm run cucumberRun "{{ github.event.inputs.custom_feature_file }} || true"
+      - name: Generete Report
+        run: npm run posttest
+
+      # - name: Archive Single File with Curl Report
+      #   uses: actions/upload-artifact@v2
+      #   with:
+      #     name: single-file-curl-report
+      #     path: /home/runner/work/nilgiri/nilgiri/report
+
+  run_daily_build:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule' && github.event.schedule == 'cron(0 0 * * *)'
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Install Dependencies
+        run: npm run nilgiriDependencyInstall
+
+      - name: Install Playwright
+        run: npx playwright install
+
+      - name: Run Daily Build
+        run: npm run automation -- --headed=false
+
+      # - name: Archive Daily Build Report
+      #   uses: actions/upload-artifact@v2
+      #   with:
+      #     name: daily-build-report
+      #     path: /home/runner/work/nilgiri/nilgiri/report
+
+  run_tests:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'workflow_dispatch' && (github.event.inputs.custom_feature_file || '') == ''
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Install Dependencies
+        run: npm run nilgiriDependencyInstall
+
+      - name: Install Playwright
+        run: npx playwright install
+
+      - name: Run Tests
+        run: npm run automation -- --headed=false
+# Please Note : Below Lines are commented Since it generating Artifact ,if you want to generate Artificate please uncomment the lines
+      # - name: Archive Test Report
+      #   uses: actions/upload-artifact@v2
+      #   with:
+      #     name: test-report
+      #     path: /home/runner/work/nilgiri/nilgiri/test-results
+
+  # combine_reports:
+  #   needs: [run_sanity_test_on_dev_push, run_single_file_with_curl, run_daily_build, run_tests]
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout Repository
+  #       uses: actions/checkout@v2
+
+  #     - name: Combine Reports
+  #       run: |
+  #         # Combine logic here
+  #         combined_report_path="/home/runner/work/nilgiri/nilgiri/report"
+          
+  #         # Sanity Test Report
+  #         if [ -f "/home/runner/work/nilgiri/nilgiri/report/cucumber_report.json" ]; then
+  #           cat /home/runner/work/nilgiri/nilgiri/report/cucumber_report.json > "$combined_report_path"
+  #         fi
+
+  #         # Single File with Curl Report
+  #         if [ -f "/home/runner/work/nilgiri/nilgiri/report/directory/cucumber_report.json" ]; then
+  #           cat /home/runner/work/nilgiri/nilgiri/report/cucumber_report.json >> "$combined_report_path"
+  #         fi
+
+  #         # Daily Build Report
+  #         if [ -f "/home/runner/work/nilgiri/nilgiri/report/cucumber_report.json" ]; then
+  #           cat /home/runner/work/nilgiri/nilgiri/report/cucumber_report.json >> "$combined_report_path"
+  #         fi
+
+  #         # Test Report
+  #         if [ -f "/home/runner/work/nilgiri/nilgiri/test-results/index.html" ]; then
+  #           cat /home/runner/work/nilgiri/nilgiri/test-results/index.html >> "$combined_report_path"
+  #         fi
+
+  #     # - name: Archive Combined Report
+  #     #   uses: actions/upload-artifact@v2
+  #     #   with:
+  #     #     name: combined-report
+  #     #     path: path/to/combined/report/directory
+
+`
+module.exports = {
+    gitHubActionYMLScript
+}
