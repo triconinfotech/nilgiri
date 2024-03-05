@@ -1,4 +1,4 @@
-const tsConfigfile = `{
+{
     "compilerOptions": {
       "target": "ES6",
       "module": "CommonJS",
@@ -10,5 +10,4 @@ const tsConfigfile = `{
     },
     "include": ["endtoend/**/*"]
   }
-  `
-  module.exports = {tsConfigfile}
+  

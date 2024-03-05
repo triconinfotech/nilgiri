@@ -1,24 +1,23 @@
 {
   "name": "nilgiri",
-  "version": "0.0.15",
-  "description": "Custom npm initializer for Playwright cucumber Type Script",
-  "bin": {
-    "create-nilgiri": "index.js"
-  },
-  "keywords": [
-    "npm-init",
-    "initializer",
-    "custom",
-    "playwright",
-    "tricon",
-    "cucumber",
-    "Automation framework",
-    "framework"
-  ],
-  "license": "MIT",
-  "main": "index.js",
+  "version": "0.0.0",
+  "description": "A hybrid automation framework that seamlessly integrates Cucumber  BDD approach with Playwright powerful browser automation capabilities, enabling expressive, behavior-driven test scenarios for robust end-to-end testing in web applications.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "nilgiriDependencyInstall": " npm i && npm install -D @playwright/test && npx playwright install",
+    "local": "npx playwright test",
+    "cucumberRun": "cucumber-js test || true",
+    "posttest": "ts-node generateReport.ts",
+    "automation": "npm run nilgiriDependencyInstall && npm run local && npm run cucumberRun && npm run posttest "
   },
-  "author": "Tricon Infotech"
+  "dependencies": {
+    "monocart": "^1.1.0",
+    "playwright": "^*",
+    "@playwright/test": "^1.32.2",
+    "nilgirihub": "*",
+    "dotenv": "^16.0.3",
+    "@types/node": "^20.9.2",
+    "ts-node": "^10.9.1",
+    "@cucumber/cucumber": "^10.0.1",
+    "multiple-cucumber-html-reporter": "*"
+  }
 }

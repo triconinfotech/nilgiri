@@ -1,5 +1,4 @@
-const gitHubActionYMLScript = 
-`name: Nilgiri_Automation
+name: Nilgiri_Automation
 
 on:
   push:
@@ -145,7 +144,3 @@ jobs:
   #     #     name: combined-report
   #     #     path: path/to/combined/report/directory
 
-`
-module.exports = {
-    gitHubActionYMLScript
-}
