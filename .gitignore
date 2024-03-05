@@ -1,4 +1,4 @@
-const gitIgnore = `
+
 node_modules
 package-lock.json
 /test-results/
@@ -6,7 +6,3 @@ package-lock.json
 /playwright/.cache/
 /.temp
 /report/
-`
-module.exports = {
-    gitIgnore
-}

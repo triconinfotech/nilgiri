@@ -1,0 +1,14 @@
+{
+    "postAPIUrl": "https://reqres.in/api/users",
+    "getAPIUrl": "https://reqres.in/api/unknown",
+    "tokenUrl": "https://api.escuelajs.co/api/v1/auth/login",
+    "getUserProfileUrl" : "https://api.escuelajs.co/api/v1/auth/profile",
+    "postAPIPayload":{
+        "name": "SWAT_TEAM",
+        "job": "Testing"
+      },
+    "tokenPayload":{
+        "email": "john@mail.com",
+        "password": "changeme"
+      }
+}

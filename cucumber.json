@@ -1,0 +1,11 @@
+{
+    "default": {
+      "requireModule": ["ts-node/register"],
+      "require": ["endtoend/steps/*.ts","endtoend/*.ts"],
+      "paths": ["endtoend/features/*"],
+      "format": ["json:report/cucumber/report.json"],
+      "formatOptions": {
+        "snippetInterface": "async-await"
+      }
+    }
+}

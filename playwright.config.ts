@@ -1,4 +1,4 @@
-const pwconfig = `// @ts-check
+// @ts-check
 import { defineConfig, devices } from '@playwright/test';
 import teamsWebhook from './report/teams-webhook';
 
@@ -73,7 +73,4 @@ export default defineConfig({
       use: { ...devices['Desktop Chrome'] },
     }
   ],
-});`
-module.exports = {
-    pwconfig
-}
+});

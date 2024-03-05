@@ -1,17 +1,4 @@
-const cucumberJsonfile = `{
-    "default": {
-      "requireModule": ["ts-node/register"],
-      "require": ["endtoend/steps/*.ts","endtoend/*.ts"],
-      "paths": ["endtoend/features/*"],
-      "format": ["json:report/cucumber/report.json"],
-      "formatOptions": {
-        "snippetInterface": "async-await"
-      }
-    }
-}`
-const cucumberHtmlReport =
-    
-    `const report = require("multiple-cucumber-html-reporter") as any;
+const report = require("multiple-cucumber-html-reporter") as any;
 
     report.generate({
         jsonDir: "report/cucumber/",
@@ -45,9 +32,4 @@ const cucumberHtmlReport =
         //         { label: "Execution End Time", value: "Nov 19th 2017, 02:56 PM EST" },
         //     ],
         // },
-    });`
-
-module.exports = {
-    cucumberJsonfile,
-    cucumberHtmlReport
-}
+    });
