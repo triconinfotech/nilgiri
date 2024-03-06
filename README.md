@@ -83,7 +83,7 @@ nilgiri/
   - `uiSpec`: Contains specification files for UI tests.
 - `endtoend`: Test specifications are divided into two categories:
   - `features`: Contains feature files for the End to End and business use cases.
-  - `steps`: Contains steps Defination for the Feature Files.
+  - `steps`: Contains steps Definition for the Feature Files.
 - `test-results`: Stores the output from test executions, such as reports and logs.
 - `utils`: Helper methods and utility functions to support various testing operations.
 - `.gitignore`: Specifies intentionally untracked files to ignore.
@@ -104,7 +104,7 @@ Before you begin, ensure you have [Node.js](https://nodejs.org/) installed on yo
    ```
 2. Navigate to the project directory:
    ```bash
-   cd nigiri
+   cd nilgiri
    ```
 
 ## Record Your Test
