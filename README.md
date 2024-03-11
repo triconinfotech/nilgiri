@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/triconinfotech/nilgiri/main/files/nilgiri.png" alt="Nilgiri Logo" width="200"/>
+  <img src="https://raw.githubusercontent.com/triconinfotech/nilgiri/main/files/nilgiri.PNG" alt="Nilgiri Logo" width="200"/>
 </p>
 <h1 align="center">Nilgiri Automation Framework</h1>
 
@@ -22,7 +22,7 @@
 
 ## Framework Flow
 
-![Nilgiri Framework](https://raw.githubusercontent.com/triconinfotech/nilgiri/main/files/nilgiriFramework.png)
+![Nilgiri Framework](https://raw.githubusercontent.com/triconinfotech/nilgiri/main/files/nilgiriFramework.PNG)
 
 ---
 
