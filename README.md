@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="files/nilgiri.PNG" alt="Nilgiri Logo" width="200"/>
+  <img src="https://raw.githubusercontent.com/triconinfotech/nilgiri/main/files/nilgiri.png" alt="Nilgiri Logo" width="200"/>
 </p>
 <h1 align="center">Nilgiri Automation Framework</h1>
 
@@ -22,7 +22,7 @@
 
 ## Framework Flow
 
-![Nilgiri Framework](files/nilgiriFramework.PNG)
+![Nilgiri Framework](https://raw.githubusercontent.com/triconinfotech/nilgiri/main/files/nilgiriFramework.png)
 
 ---
 
@@ -111,7 +111,7 @@ Before you begin, ensure you have [Node.js](https://nodejs.org/) installed on yo
 
 Record your test with [Playwright CodeGen](https://playwright.dev/docs/codegen)
 
-![Playwright CodeGen Demo](files/PlaywrightCodeGen.gif)
+![Playwright CodeGen Demo](https://raw.githubusercontent.com/triconinfotech/nilgiri/main/files/PlaywrightCodeGen.gif)
 
 ## Running Tests
 
