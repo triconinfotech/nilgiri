@@ -6,7 +6,7 @@ const resource: string = "/";
 
 
 /*
-1. Lounch Triconinfotech URL 
+1. Launch Triconinfotech URL 
 2. Validate Menu Items
 */
 test('Validate all Menu Items in Home Page', async ({ page, baseURL }) => {
@@ -15,7 +15,7 @@ test('Validate all Menu Items in Home Page', async ({ page, baseURL }) => {
     await testSpec.validatemenuItems({ page })
 }),
     /*
-    1. Lounch Triconinfotech URL 
+    1. Launch Triconinfotech URL 
     2. Validate Contact Us in Last of the page
     */
     test('Validate Contact us in lst of the Hom Page', async ({ page, baseURL }) => {
