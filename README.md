@@ -94,7 +94,7 @@ nilgiri/
 
 ---
 
-## Installation
+## Installation from GIT
 
 Before you begin, ensure you have [Node.js](https://nodejs.org/) installed on your system.
 
@@ -105,6 +105,21 @@ Before you begin, ensure you have [Node.js](https://nodejs.org/) installed on yo
 2. Navigate to the project directory:
    ```bash
    cd nilgiri
+   ```
+
+## Installation from NPM
+
+Before you begin, ensure you have [Node.js](https://nodejs.org/) installed on your system.
+
+1. Create folder in local and open from VS Code:
+  
+2. Navigate to the project directory:
+   ```bash
+   cd <folder-name>
+   ```
+3. Trigger the below command:
+   ```bash
+    npm init nilgiri@latest --y
    ```
 
 ## Record Your Test
