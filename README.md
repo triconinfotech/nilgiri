@@ -15,8 +15,8 @@
     <a href="https://cucumber.io/">
         <img src="https://img.shields.io/badge/Cucumber-BDD-green.svg" alt="Cucumber BDD">
     </a>
-    <a href="https://github.com/animeshkumar29/nilgiri/blob/main/LICENSE.txt">
-        <img src="https://img.shields.io/github/license/animeshkumar29/nilgiri" alt="license: MIT">
+    <a href="https://github.com/triconinfotech/nilgiri/blob/main/LICENSE.txt">
+        <img src="https://img.shields.io/github/license/triconinfotech/nilgiri" alt="license: MIT">
     </a>
 </p>
 
